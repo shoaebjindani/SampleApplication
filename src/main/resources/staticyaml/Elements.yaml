@@ -1,0 +1,166 @@
+elements:
+- elementId: 1
+  elementName: "Admin"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 21
+  elementName: "User Role Mapping"
+  parentElementId: 1
+  elementUrl: "?a=showUserRoleMapping"
+  orderNo: 4
+- elementId: 2
+  elementName: "Configurations"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 22
+  elementName: "Flat Master"
+  parentElementId: 2
+  elementUrl: "?a=showFlatMaster"
+  orderNo: 2
+- elementId: 23
+  elementName: "Shop Master"
+  parentElementId: 2
+  elementUrl: "?a=showShopMaster"
+  orderNo: 2
+- elementId: 3
+  elementName: "Expense"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 4
+  elementName: "Income"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 5
+  elementName: "Payment"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 26
+  elementName: "Block Master"
+  parentElementId: 2
+  elementUrl: "?a=showBlockMaster"
+  orderNo: 1
+- elementId: 27
+  elementName: "Vehicle Master"
+  parentElementId: 2
+  elementUrl: "?a=showVehicleMaster"
+  orderNo: 4
+- elementId: 24
+  elementName: "Expense Register"
+  parentElementId: 3
+  elementUrl: "?a=showExpenseEntry"
+  orderNo: 2
+- elementId: 25
+  elementName: "Add Expense"
+  parentElementId: 3
+  elementUrl: "?a=showAddExpense"
+  orderNo: 2
+- elementId: 28
+  elementName: "Income Register"
+  parentElementId: 4
+  elementUrl: "?a=showIncomeEntry"
+  orderNo: 2
+- elementId: 29
+  elementName: "Add Income"
+  parentElementId: 4
+  elementUrl: "?a=showAddIncome"
+  orderNo: 2
+- elementId: 30
+  elementName: "Payment Master"
+  parentElementId: 5
+  elementUrl: "?a=showAccountMasterNew"
+  orderNo: 2
+- elementId: 31
+  elementName: "PaymentLink"
+  parentElementId: 5
+  elementUrl: "?a=showPrintLabelsScreenAccount"
+  orderNo: 2
+- elementId: 50
+  elementName: "Person Master"
+  parentElementId: 2
+  elementUrl: "?a=showPersonMaster"
+  orderNo: 2
+- elementId: 32
+  elementName: " Flat Owner Mapping"
+  parentElementId: 2
+  elementUrl: "?a=showFlatOwnerMapping"
+  orderNo: 2
+- elementId: 33
+  elementName: "Collect Maintenence"
+  parentElementId: 2
+  elementUrl: "?a=showAddMaintenence"
+  orderNo: 2
+- elementId: 34
+  elementName: "Flat Tenant Mapping"
+  parentElementId: 2
+  elementUrl: "?a=showFlatTenantMapping"
+  orderNo: 2
+- elementId: 35
+  elementName: "Guest Vehicle Entry"
+  parentElementId: 2
+  elementUrl: "?a=showGuestVehicleEntry"
+  orderNo: 2
+- elementId: 36
+  elementName: "Maintenence Register"
+  parentElementId: 37
+  elementUrl: "?a=showMaintenanceRegister"
+  orderNo: 2
+- elementId: 37
+  elementName: "Reports"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 38
+  elementName: "Maintenence Summary"
+  parentElementId: 37
+  elementUrl: "?a=showMaintenenceSummary"
+  orderNo: 1
+- elementId: 39
+  elementName: " Flat Exception Master"
+  parentElementId: 2
+  elementUrl: "?a=showFlatExceptionMaster"
+  orderNo: 2
+- elementId: 40
+  elementName: "Maintenence Monthly Report"
+  parentElementId: 37
+  elementUrl: "?a=showMaintenenceMonthlyReport"
+  orderNo: 1
+- elementId: 41
+  elementName: "Distribution Register"
+  parentElementId: 37
+  elementUrl: "?a=showDistributionRegister"
+  orderNo: 1
+- elementId: 42
+  elementName: "Maintenance Defaulters"
+  parentElementId: 37
+  elementUrl: "?a=showReport&report_id=1"
+  orderNo: 1
+- elementId: 43
+  elementName: "Worklist"
+  parentElementId: -1
+  elementUrl: ""
+  orderNo: 2
+- elementId: 44
+  elementName: "Collect Transfer Fees"
+  parentElementId: 43
+  elementUrl: "?a=showAddCollectTransferFees"
+  orderNo: 2
+- elementId: 45
+  elementName: "Transfer Fees Register"
+  parentElementId: 37
+  elementUrl: "?a=showTransferFeesRegister"
+  orderNo: 2
+- elementId: 700187
+  elementName: "Capture MOM"
+  parentElementId: 43
+  elementUrl: "?a=showCaptureMom"
+  orderNo: 2
+- elementId: 700188
+  elementName: "MOM Register"
+  parentElementId: 43
+  elementUrl: "?a=showMinutesOfMeeting"
+  orderNo: 2

@@ -1,0 +1,10 @@
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\AddTestFuel.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\CollectPaymentSupervisor.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\GenerateInvoice5.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\NozzleRegister.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\NozzleSelection.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\NozzleSelectionForm.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\WebContent\UnclaimedPayments.jsp
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\src\com\crystal\basecontroller\BaseController.java
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\src\com\crystal\customizedpos\Configuration\ConfigurationDaoImpl.java
+D:\ProgrammingSource\JavaWorkspace\CustomizedPOS\src\com\crystal\customizedpos\Configuration\ConfigurationServiceImpl.java

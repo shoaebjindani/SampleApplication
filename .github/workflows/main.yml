@@ -1,0 +1,25 @@
+name: Deploy to Ubuntu
+
+on:
+  push:
+    branches:
+      - AkibahHeights
+      
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      JAVA_HOME: "/home/ubuntu/jdk-21.0.1"
+    steps:
+
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.UBUNTU_PRIVATE_KEY }}
+
+    - name: SSH into Ubuntu machine
+      run: |
+        BRANCH_NAME=$(echo "${{ github.ref }}" | sed 's/refs\/heads\///')
+        ssh -o StrictHostKeyChecking=no -p 22 ubuntu@abcdomain.in "export PATH='$PATH:/home/ubuntu/jdk-21.0.1/bin' && cd gitrepos && ./patch.sh ${BRANCH_NAME}"
