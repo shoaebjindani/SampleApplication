@@ -1,6 +1,7 @@
 - roleId: 1
   roleName: "Admin"
   actions: 
+  - showHomePage
   - deleteRentalExpense 
   - addExpenseRental
   - generateMOMPdfData

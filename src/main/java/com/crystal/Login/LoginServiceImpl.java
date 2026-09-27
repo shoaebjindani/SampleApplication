@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.fileupload.FileUploadException;
 
 import com.crystal.customizedpos.Configuration.ConfigurationDaoImpl;
+
 import Frameworkpackage.CommonFunctions;
 import Frameworkpackage.CustomResultObject;
 
@@ -90,7 +91,7 @@ public class LoginServiceImpl extends CommonFunctions {
 				outputMap.putAll(getRetailDashboardData(request, con,outputMap));
 				outputMap.put("lstVehicles",lObjConfiguration.getVehicleMaster(outputMap, con));
 
-				rs.setViewName("../SocietyMaintenenceDashboard.jsp");
+				rs.setViewName("../TradingDashboard.jsp");
 		
 			
 		}
