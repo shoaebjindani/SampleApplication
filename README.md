@@ -1,3 +1,4 @@
+```
 mysqlusername: ""
 password: ""
 host: ""
@@ -12,3 +13,4 @@ persistentPath: "/home/ubuntu/sample_attachments/"
 queryLogEnabled: "false"
 sendEmail: "false"
 device_restriction_enabled: "false"
+```
