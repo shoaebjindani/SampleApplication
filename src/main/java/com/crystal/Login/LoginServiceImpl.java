@@ -88,8 +88,8 @@ public class LoginServiceImpl extends CommonFunctions {
 			
 			
 			
-				outputMap.putAll(getRetailDashboardData(request, con,outputMap));
-				outputMap.put("lstVehicles",lObjConfiguration.getVehicleMaster(outputMap, con));
+				//outputMap.putAll(getRetailDashboardData(request, con,outputMap));
+				//outputMap.put("lstVehicles",lObjConfiguration.getVehicleMaster(outputMap, con));
 
 				rs.setViewName("../TradingDashboard.jsp");
 		
