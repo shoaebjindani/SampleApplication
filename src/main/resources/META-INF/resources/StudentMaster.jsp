@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script>
-function deleteFlat(flatId)
+function deleteStudent(StudentId)
 {
 	
 	var answer = window.confirm("Are you sure you want to delete ?");
@@ -29,11 +29,11 @@ function deleteFlat(flatId)
 		  
 		}
 	  };
-	  xhttp.open("GET","?a=deleteFlat&flatId="+flatId, true);    
+	  xhttp.open("GET","?a=deleteStudent&StudentId="+StudentId, true);    
 	  xhttp.send();
 }
 
-function EditCategory(flatId,categoryName)
+function EditCategory(StudentId,categoryName)
 {
 	
 	
@@ -44,7 +44,7 @@ function EditCategory(flatId,categoryName)
 	var stringToPopulate='<table class="table table-bordered tablecss" border="3">';
 	stringToPopulate+='<tr style="background-color:cornsilk;" align="center"><td colspan="2">Update Category</td></tr>';
 	stringToPopulate+='<tr><td>Category Name </td> <td colspan="2"><input id="txtcategorynamepopup" placeholder="Category Name" value="'+categoryName+'" class="form-control input-sm" id="inputsm" type="text"></td></tr>';
-	stringToPopulate+="<tr align=\"center\"><td colspan=\"2\"><button class=\"btn btn-primary\" onclick=\"updatedcategory("+flatId+")\">Update</button></td></tr>";
+	stringToPopulate+="<tr align=\"center\"><td colspan=\"2\"><button class=\"btn btn-primary\" onclick=\"updatedcategory("+StudentId+")\">Update</button></td></tr>";
 	stringToPopulate+='</table>';
 	
 	document.getElementById("responseText").innerHTML=stringToPopulate;
@@ -99,7 +99,7 @@ function addCategory()
 }
 function reloadFilters()
   {
-	  window.location="?a=showFlatMaster&blockId="+drpblockname.value+"&type="+drptype.value;	 
+	  window.location="?a=showStudentMaster&blockId="+drpblockname.value+"&type="+drptype.value;	 
 	  
   }
   
@@ -111,7 +111,7 @@ function reloadFilters()
 
 
 
-<c:set var="message" value='${requestScope["outputObject"].get("ListOfFlats")}' />
+<c:set var="message" value='${requestScope["outputObject"].get("ListOfStudents")}' />
 <c:set var="listOfBlocks" value='${requestScope["outputObject"].get("listOfBlocks")}' />
 
 
@@ -127,7 +127,7 @@ function reloadFilters()
                 
               <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 200px;">                    
-                    <input type="button"  class="btn btn-block btn-primary btn-sm" onclick="window.location='?a=showAddFlat'" value="Add Flat" class="form-control float-right" >                      
+                    <input type="button"  class="btn btn-block btn-primary btn-sm" onclick="window.location='?a=showAddStudent'" value="Add Student" class="form-control float-right" >                      
                   </div>
                 </div>
                 
@@ -185,7 +185,7 @@ function reloadFilters()
                      
                      
 					 <th><b>Block Name</b></th>
-                     <th><b>Flat Name</b></th>
+                     <th><b>Student Name</b></th>
                      <th><b>Type</b></th>
 					  <th><b>Owner Name</b></th>
                      
@@ -197,10 +197,10 @@ function reloadFilters()
 					<tr >
 						
 						<td>${item.block_name}</td>	
-						<td>${item.flat_name}</td>						
+						<td>${item.Student_name}</td>						
 						<td>${item.type}</td>
 						<td>${item.person_name}</td>			
-						<td><a href="?a=showAddFlat&flatId=${item.flat_id}">Edit</a></td><td><button class="btn btn-danger" onclick="deleteFlat('${item.flat_id}')">Delete</button></td>
+						<td><a href="?a=showAddStudent&StudentId=${item.Student_id}">Edit</a></td><td><button class="btn btn-danger" onclick="deleteStudent('${item.Student_id}')">Delete</button></td>
 					</tr>
 				</c:forEach>
 				
@@ -232,7 +232,7 @@ function reloadFilters()
     });
   });
   
-  document.getElementById("divTitle").innerHTML="Flat Master";
+  document.getElementById("divTitle").innerHTML="Student Master";
   
   drpblockname.value="${param.blockId}";
   drptype.value="${param.type}";

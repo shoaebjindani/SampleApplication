@@ -10230,7 +10230,7 @@ public class ConfigurationServiceImpl extends CommonFunctions {
 	}
 
 	
-	public CustomResultObject showFlatMaster(HttpServletRequest request, Connection con) {
+	public CustomResultObject showStudentMaster(HttpServletRequest request, Connection con) {
 		CustomResultObject rs = new CustomResultObject();
 		HashMap<String, Object> outputMap = new HashMap<>();
 
@@ -10252,16 +10252,16 @@ public class ConfigurationServiceImpl extends CommonFunctions {
 
 			List<LinkedHashMap<String, Object>> lst = null;
 
-			lst = lObjConfigDao.getFlatMaster(con,outputMap);
+			//lst = lObjConfigDao.getFlatMaster(con,outputMap);
 
 			if (!exportFlag.isEmpty())
 				outputMap = getCommonFileGenerator(colNames, lst, exportFlag, DestinationPath, userId,
 						"FlatMaster");
 			else {
-				outputMap.put("ListOfFlats", lst);
-				outputMap.put("listOfBlocks", lObjConfigDao.getBlockMaster(con));
+				//outputMap.put("ListOfFlats", lst);
+				//outputMap.put("listOfBlocks", lObjConfigDao.getBlockMaster(con));
 				
-				rs.setViewName("../FlatMaster.jsp");
+				rs.setViewName("../StudentMaster.jsp");
 				rs.setReturnObject(outputMap);
 			}
 
@@ -10275,7 +10275,7 @@ public class ConfigurationServiceImpl extends CommonFunctions {
 
 	
 
-	public CustomResultObject showAddFlat(HttpServletRequest request, Connection connections) {
+	public CustomResultObject showAddStudent(HttpServletRequest request, Connection connections) {
 		CustomResultObject rs = new CustomResultObject();
 		HashMap<String, Object> outputMap = new HashMap<>();
 
@@ -10286,8 +10286,8 @@ public class ConfigurationServiceImpl extends CommonFunctions {
 			if (flatId != 0) {
 				outputMap.put("flatDetails", lObjConfigDao.getFlatDetails(outputMap, connections));
 			}
-			outputMap.put("BlockList", lObjConfigDao.getBlocks(connections));
-			rs.setViewName("../AddFlat.jsp");
+//			outputMap.put("BlockList", lObjConfigDao.getBlocks(connections));
+			rs.setViewName("../AddStudent.jsp");
 			rs.setReturnObject(outputMap);
 		} catch (Exception e) {
 			writeErrorToDB(e);
