@@ -71,3 +71,7 @@ http://localhost:8080
 ## Setup Complete
 
 The basic application setup is now complete.
+
+
+
+docker run -d --name mysql-db -e MYSQL_ROOT_PASSWORD=root123 -p 3306:3306 mysql:8.0
