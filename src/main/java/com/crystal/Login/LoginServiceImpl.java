@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.fileupload.FileUploadException;
 
-import com.crystal.customizedpos.Configuration.ConfigurationDaoImpl;
 
 import Frameworkpackage.CommonFunctions;
 import Frameworkpackage.CustomResultObject;
@@ -72,7 +71,6 @@ public class LoginServiceImpl extends CommonFunctions {
 		rs.setReturnObject(outputMap);
 		return rs;
 	}
-	ConfigurationDaoImpl lObjConfiguration = new ConfigurationDaoImpl();
 	
 	public CustomResultObject showHomePage(HttpServletRequest request, Connection con) {
 		CustomResultObject rs = new CustomResultObject();
@@ -106,41 +104,7 @@ public class LoginServiceImpl extends CommonFunctions {
 			
 	}
 	
-	public HashMap<String, Object> getRetailDashboardData(HttpServletRequest request, Connection con,HashMap<String, Object> outputMap) throws SQLException, ClassNotFoundException, ParseException
-	{
-		
-		
-			
-			outputMap.putAll(lObjConfiguration.getDataForHomepage(outputMap,con));
-
-			
-
-			outputMap.put("todaysDate", getDateFromDB(con));
-			
-		
-	return outputMap;
-
-	}
-
-	private HashMap<String, Object> calculateTotal(List<LinkedHashMap<String, Object>> paymentData,
-			String[] columnNames) {
-		HashMap<String, Object> calculatedDetails = new HashMap<>();
-		for (HashMap<String, Object> hm : paymentData) {
-			for (String s : columnNames) {
-				if (calculatedDetails.get(s) == null) {
-					calculatedDetails.put(s, hm.get(s));
-				} else {
-					BigDecimal Existingvalue = new BigDecimal(calculatedDetails.get(s).toString());
-					
-					String m=hm.get(s)==null?"0":hm.get(s).toString();
-					BigDecimal newValue = new BigDecimal(m);
-					newValue=newValue.add(Existingvalue) ;
-					calculatedDetails.put(s, newValue);
-				}
-			}
-		}
-		return calculatedDetails;
-	}
+	
 
 	public CustomResultObject showChangePassword(HttpServletRequest request, Connection con) {
 		CustomResultObject rs = new CustomResultObject();
